@@ -2,12 +2,22 @@
 
 function hesapMakinesi(sayi1, sayi2, islemIsareti){
     
-    if( isNaN(sayi1) || isNaN(sayi2 ))console.log('string deger girdiniz lutfen number giriniz!!');
+    if( isNaN(sayi1) || isNaN(sayi2 )) {
+    
+    let sonuc={
+        hata:['error'],
+        explain: 'not a number!!'
+      }
+      return sonuc;
+
+    }
+
     else{
         if ( islemIsareti == '+'){
             let sonuc = {
               islemSonucu:  sayi1+sayi2,
-              secim: 'toplama'
+              secim: 'toplama',
+             
     
                      }
                return sonuc;
@@ -16,7 +26,8 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
         else if ( islemIsareti == '-'){
             let sonuc = {
               islemSonucu:  sayi1-sayi2,
-              secim: 'cikarma'
+              secim: 'cikarma',
+             
     
                      }
                 return sonuc;
@@ -31,9 +42,16 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
                  return sonuc;
             }
         
-        else if ( islemisareti == '/'){
+        else if ( islemIsareti == '/'){
        
-                 if(sayi2==0) console.log('ikinci sayi sifira esit.Bu yuzden sonuc belirsizdir');
+                 if(sayi2==0) 
+                 { 
+                     let sonuc={
+                         hata:['error'],
+                         explain: 'second number equals to zero'
+                     }
+                 return sonuc
+                }
                  else {
                     let sonuc = {
                       islemsonucu:  sayi1/sayi2,
@@ -44,12 +62,19 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
             }
           }
     
-        else console.log('boyle bir islem bulunamadi!!');
+        else {
+            
+            let sonuc={
+            hata:['error'],
+            explain: 'sign is wrong!!'
+        }
+        return sonuc;
     }
     
     }
+}
     
-      const islemm = hesapMakinesi(74,  4,'+');
+      const islemm = hesapMakinesi(74, 13,'+');
       console.log(islemm);
     
     //gelistirilecektir!!
