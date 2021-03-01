@@ -1,10 +1,16 @@
-//islem isaretini lutfen string deger olarak girelim!!
+/**
+ * 
+ * 
+ * 
+ *  */ 
 
 function hesapMakinesi(sayi1, sayi2, islemIsareti){
+
+  let sonuc={}
     
     if( isNaN(sayi1) || isNaN(sayi2 )) {
     
-    let sonuc={
+     sonuc={
         hata:['error'],
         explain: 'not a number!!'
       }
@@ -14,7 +20,7 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
 
     else{
         if ( islemIsareti == '+'){
-            let sonuc = {
+            sonuc = {
               islemSonucu:  sayi1+sayi2,
               secim: 'toplama',
              
@@ -24,7 +30,7 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
             } 
         
         else if ( islemIsareti == '-'){
-            let sonuc = {
+             sonuc = {
               islemSonucu:  sayi1-sayi2,
               secim: 'cikarma',
              
@@ -34,7 +40,7 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
             }
         
         else if ( islemIsareti == '*'){
-            let sonuc = {
+             sonuc = {
               islemSonucu:  sayi1*sayi2,
               secim: 'carpma'
     
@@ -46,14 +52,14 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
        
                  if(sayi2==0) 
                  { 
-                     let sonuc={
+                      sonuc={
                          hata:['error'],
                          explain: 'second number equals to zero'
                      }
                  return sonuc
                 }
                  else {
-                    let sonuc = {
+                     sonuc = {
                       islemsonucu:  sayi1/sayi2,
                       secim: 'bolme'
             
@@ -64,7 +70,7 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
     
         else {
             
-            let sonuc={
+            sonuc={
             hata:['error'],
             explain: 'sign is wrong!!'
         }
@@ -74,7 +80,7 @@ function hesapMakinesi(sayi1, sayi2, islemIsareti){
     }
 }
     
-      const islemm = hesapMakinesi(74, 13,'+');
+      const islemm = hesapMakinesi(45, 0,'/');
       console.log(islemm);
     
     //gelistirilecektir!!
